@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useRouter } from "expo-router";
 import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 
@@ -32,7 +33,7 @@ const Nearbyjobs = () => {
           data?.map((job) => (
             <NearbyJobCard
               job={job}
-              key={`nearby-job-${job?.job_id}`}
+              key={`nearby-job-${job.job_id}`}
               handleNavigate={() => router.push(`/job-details/${job.job_id}`)}
             />
           ))
